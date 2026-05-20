@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NU Bite | Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="admin-app">
+  <aside class="sidebar">
+    <h2>🍽️ NU Bite</h2>
+    <p>Admin POS</p>
+
+    <button class="active" onclick="showAdminTab('pending', this)">📋 Pending Orders</button>
+    <button onclick="showAdminTab('completed', this)">✅ Completed Orders</button>
+    <button onclick="logout()">🚪 Logout</button>
+  </aside>
+
+  <main class="main-panel">
+    <div class="admin-tools">
+      <input type="date" id="dateFilter" onchange="loadOrders()">
+      <input type="text" id="searchOrder" placeholder="Search Order ID..." onkeyup="loadOrders()">
+      <button onclick="clearFilters()">Clear</button>
+    </div>
+
+    <section id="pendingTab">
+      <h1>Pending Orders</h1>
+      <div id="ordersContainer"></div>
+    </section>
+
+    <section id="completedTab" style="display:none;">
+      <h1>Completed Orders</h1>
+      <div id="completedContainer"></div>
+    </section>
+  </main>
+</div>
+
+<div class="logout-modal" id="logoutModal">
+  <div class="logout-box">
+    <div class="logout-icon">🚪</div>
+    <h2>Logout?</h2>
+    <p>Are you sure you want to logout from the admin panel?</p>
+
+    <div class="logout-actions">
+      <button class="cancel-btn" onclick="closeLogoutModal()">Cancel</button>
+      <button class="confirm-btn" onclick="confirmLogout()">Yes, Logout</button>
+    </div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

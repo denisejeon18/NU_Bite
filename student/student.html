@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NU Bite | Student</title>
+  <link rel="stylesheet" href="student.css">
+</head>
+<body>
+
+<div class="student-app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">NU</div>
+      <div>
+        <h2>NU Bite</h2>
+        <p>Canteen System</p>
+      </div>
+    </div>
+
+    <nav>
+      <button class="nav-btn active" onclick="showTab('menuTab', this)">🍽️ Menu Dashboard</button>
+      <button class="nav-btn" onclick="showTab('trackTab', this)">📦 Track Order</button>
+    </nav>
+
+    <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+  </aside>
+
+  <main class="main-panel">
+    <section id="menuTab" class="tab active">
+      <div class="topbar">
+        <button class="hamburger">☰</button>
+        <input id="searchFood" placeholder="Search products here..." onkeyup="displayMenu()">
+        <span class="student-badge">Student</span>
+      </div>
+
+      <div class="categories">
+        <button class="category active" onclick="filterCategory('All')">▦ <b>All</b><span>23 items</span></button>
+        <button class="category" onclick="filterCategory('Breakfast')">🍳 <b>Breakfast</b><span>5 items</span></button>
+        <button class="category" onclick="filterCategory('Lunch')">🍛 <b>Lunch</b><span>10 items</span></button>
+        <button class="category" onclick="filterCategory('Snacks')">🍔 <b>Snacks</b><span>5 items</span></button>
+        <button class="category" onclick="filterCategory('Drinks')">🥤 <b>Drinks</b><span>3 items</span></button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <section id="paymentTab" class="tab">
+      <div class="payment-card">
+        <h1>Payment Gateway</h1>
+        <p>Choose your payment method.</p>
+
+        <select id="paymentMethod" onchange="showPaymentDetails()">
+          <option value="Cash on Pickup">Cash on Pickup</option>
+          <option value="GCash QR Code">GCash QR Code</option>
+          <option value="GCash Number Transfer">GCash Number Transfer</option>
+          <option value="Instapay Transfer">Instapay Transfer</option>
+        </select>
+
+        <div id="paymentDetails" class="payment-details"></div>
+
+        <button onclick="payNow()">Pay Now</button>
+      </div>
+    </section>
+
+    <section id="trackTab" class="tab"></section>
+
+    <section id="accountTab" class="tab">
+      <div class="payment-card">
+        <h1>Account Settings</h1>
+        <input placeholder="Student Name">
+        <input placeholder="Student Number">
+        <button>Save Changes</button>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-panel">
+    <h2>Your Cart</h2>
+    <div id="cartItems">No items added.</div>
+
+    <div class="cart-bottom">
+      <h2 id="total">₱0</h2>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+  </aside>
+</div>
+
+<div class="logout-modal" id="logoutModal">
+  <div class="logout-box">
+    <div class="logout-icon">🚪</div>
+    <h2>Logout?</h2>
+    <p>Are you sure you want to logout from your student account?</p>
+
+    <div class="logout-actions">
+      <button class="cancel-btn" onclick="closeLogoutModal()">Cancel</button>
+      <button class="confirm-btn" onclick="confirmLogout()">Yes, Logout</button>
+    </div>
+  </div>
+</div>
+
+<script src="student.js"></script>
+</body>
+</html>
