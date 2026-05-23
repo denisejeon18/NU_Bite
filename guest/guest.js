@@ -9,18 +9,17 @@ const menu = [
   { name: "Sisig", category: "Lunch", price: 90, img: "../images/sisig.png" },
   { name: "Chicken Tinola", category: "Lunch", price: 80, img: "../images/tinola.png" },
   { name: "Bicol Express", category: "Lunch", price: 85, img: "../images/bicol-express.png" },
+  { name: "Monggo", category: "Lumch", price: 50, img: "../images/monggo.png" },
+  { name: "Tortang Talong", category: "Lunch", price: 45, img: "../images/tortang-talong.png" },
+  { name: "Chopsuey", category: "Lunch", price: 60, img: "../images/chopsuey.png" },
+  { name: "Ginataang Gulay", category: "Lunch", price: 55, img: "../images/ginataang-gulay.png" },
+  { name: "Adobong Sitaw", category: "Lunch", price: 55, img: "../images/adobong-sitaw.png" },
 
   { name: "Hotdog", category: "Breakfast", price: 40, img: "../images/hotdog.png" },
   { name: "Egg", category: "Breakfast", price: 15, img: "../images/egg.png" },
   { name: "Meatloaf", category: "Breakfast", price: 50, img: "../images/meatloaf.png" },
   { name: "Tocino", category: "Breakfast", price: 70, img: "../images/tocino.png" },
   { name: "Fried Bangus", category: "Breakfast", price: 85, img: "../images/fried-bangus.png" },
-
-  { name: "Monggo", category: "Snacks", price: 50, img: "../images/monggo.png" },
-  { name: "Tortang Talong", category: "Snacks", price: 45, img: "../images/tortang-talong.png" },
-  { name: "Chopsuey", category: "Snacks", price: 60, img: "../images/chopsuey.png" },
-  { name: "Ginataang Gulay", category: "Snacks", price: 55, img: "../images/ginataang-gulay.png" },
-  { name: "Adobong Sitaw", category: "Snacks", price: 55, img: "../images/adobong-sitaw.png" },
 
   { name: "Water Bottle", category: "Drinks", price: 20, img: "../images/water-bottle.png" },
   { name: "Iced Tea", category: "Drinks", price: 25, img: "../images/iced-tea.png" },
