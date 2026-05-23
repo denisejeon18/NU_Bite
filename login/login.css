@@ -91,3 +91,98 @@ body {
   background: #FFD100 !important;
   color: #172554 !important;
 }
+
+.password-wrap {
+  position: relative;
+}
+
+.password-wrap input {
+  padding-right: 55px;
+}
+
+.password-wrap button {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  background: #eef4ff;
+  color: #003DA5;
+}
+
+.logout-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.logout-box {
+  width: 360px;
+  background: white;
+  padding: 30px;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+  animation: popUp 0.2s ease;
+}
+
+.logout-icon {
+  width: 70px;
+  height: 70px;
+  background: #fff3cd;
+  color: #92400e;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  font-size: 32px;
+}
+
+.logout-box h2 {
+  color: #003DA5;
+  margin-bottom: 10px;
+}
+
+.logout-box p {
+  color: #666;
+  margin-bottom: 22px;
+  line-height: 1.4;
+}
+
+.logout-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.logout-actions button {
+  flex: 1;
+  padding: 13px;
+  border: none;
+  border-radius: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background: #003DA5;
+  color: white;
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

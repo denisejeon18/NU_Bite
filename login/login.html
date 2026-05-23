@@ -19,7 +19,11 @@
     <p>Login using your username and password.</p>
 
     <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
+
+    <div class="password-wrap">
+      <input type="password" id="password" placeholder="Password">
+      <button type="button" id="togglePasswordBtn" onclick="togglePassword()">👁️</button>
+    </div>
 
     <button onclick="loginUser()">Login</button>
 
@@ -28,6 +32,18 @@
     </button>
   </section>
 </main>
+
+<div class="logout-modal" id="loginErrorModal">
+  <div class="logout-box">
+    <div class="logout-icon">⚠️</div>
+    <h2>Login Failed</h2>
+    <p>Invalid username or password. Please try again.</p>
+
+    <div class="logout-actions">
+      <button class="confirm-btn" onclick="closeLoginErrorModal()">Try Again</button>
+    </div>
+  </div>
+</div>
 
 <script src="login.js"></script>
 </body>
